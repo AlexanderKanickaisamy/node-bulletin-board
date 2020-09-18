@@ -1,6 +1,6 @@
 pipeline {
 environment {
-  registry = "alexanderkanickaisamy/node-bulletin-board"
+  registry = "alexanderkanickaisamy/bulletinboard"
   registryCredential = 'dockerhub'
 }
 agent any
