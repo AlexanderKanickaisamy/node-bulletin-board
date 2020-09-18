@@ -1,10 +1,7 @@
-FROM node:current-slim
-
+FROM node:latest
+RUN npm install nodemon -g
 WORKDIR /usr/src/app
-COPY package.json ./
+ADD . /usr/src/app
 RUN npm install
-
 EXPOSE 8080
-CMD [ "npm", "start" ]
-
-COPY . .
+CMD ["npm", "start"] 
