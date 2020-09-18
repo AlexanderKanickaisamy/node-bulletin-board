@@ -33,7 +33,7 @@ stages {
   
   node {
     stage('Execute Image') {
-            def customImage = docker.build("AlexanderKanickaisamy/node-bulletin-board:${env.BUILD_NUMBER}")
+            def customImage = docker.build("alexanderkanickaisamy/bulletinboard:${env.BUILD_NUMBER}")
             customImage.inside {
                  sh 'echo This is the code which is getting executed inside the container'
                }
